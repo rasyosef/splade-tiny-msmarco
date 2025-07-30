@@ -11,13 +11,13 @@ You can download the models from the following huggingface collection.
 
 ## Performance
 
-The splade models were evaluated on 55 thousand queries and 8 million documents from the [MSMARCO](https://huggingface.co/datasets/microsoft/ms_marco) dataset.
+The splade models were evaluated on 55 thousand queries and 8.84 million documents from the [MSMARCO](https://huggingface.co/datasets/microsoft/ms_marco) dataset.
 
 ||Size (# Params)|MRR@10 (MS MARCO dev)|
 |:---|:----|:-------------------|
-|`BM25`|-|18.6|-|-|
-|`rasyosef/splade-tiny`|4.4M|30.8|
-|`rasyosef/splade-mini`|11.2M|32.8|
+|`BM25`|-|18.0|-|-|
+|`rasyosef/splade-tiny`|4.4M|30.9|
+|`rasyosef/splade-mini`|11.2M|33.2|
 |`naver/splade-v3-distilbert`|67.0M|38.7|
 
 ## Sample Inference Code
