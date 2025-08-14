@@ -2,7 +2,7 @@
 
 This repo contains Python code to train SPLADE sparse retrieval models based on BERT-Tiny (4M params) and BERT-Mini (11M params) by distilling a Cross-Encoder on the MSMARCO dataset. The cross-encoder used was [ms-marco-MiniLM-L6-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2). 
 
-The tiny SPLADE models beat `BM25` by `65.6 - 76.3%` on the MSMARCO benchmark. Even though these models are `6-15x` smaller than Naver's official `splade-v3-distilbert`, they retain `80-85%` of it's performance on MSMARCO, all while producing sparser embedding vectors with `34-45%` fewer active dimentions. The tiny SPLADE models are small enough to be used without a GPU on a dataset of a few thousand documents. 
+The tiny SPLADE models beat `BM25` by `65.6 - 76.3%` on the MSMARCO benchmark. Even though these models are `6-15x` smaller than Naver's official `splade-v3-distilbert`, they retain `80-85%` of it's performance on MSMARCO, all while producing sparser embedding vectors with `34-45%` fewer active dimensions. The tiny SPLADE models are small enough to be used without a GPU on a dataset of a few thousand documents. 
 
 You can download the models from the following huggingface collection.
 
