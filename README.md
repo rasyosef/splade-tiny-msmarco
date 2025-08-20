@@ -2,7 +2,7 @@
 
 This repo contains Python code to train SPLADE sparse retrieval models based on BERT-Tiny (4M params), BERT-Mini (11M params), and BERT-Small (28.8M params) by distilling a Cross-Encoder on the MSMARCO dataset. The cross-encoder used was [ms-marco-MiniLM-L6-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2). 
 
-The tiny SPLADE models beat `BM25` by `65.6 - 76.3%` on the MSMARCO benchmark. Even though `splade-mini` and `splade-tiny` are `6-15x` smaller than Naver's official `splade-v3-distilbert`, they retain `80-85%` of it's performance on MSMARCO, all while producing sparser embedding vectors with `34-45%` fewer active dimensions. The tiny SPLADE models are small enough to be used without a GPU on a dataset of a few thousand documents. 
+The tiny SPLADE models beat `BM25` by `65.6 - 76.3%` on the MSMARCO benchmark. Even though `splade-mini` and `splade-tiny` are `6-15x` smaller than Naver's official [splade-v3-distilbert](https://huggingface.co/naver/splade-v3-distilbert), they retain `80-85%` of it's performance on MSMARCO, all while producing sparser embedding vectors with `34-45%` fewer active dimensions. The tiny SPLADE models are small enough to be used without a GPU on a dataset of a few thousand documents. 
 
 You can download the models from the following huggingface collection.
 
@@ -13,13 +13,16 @@ You can download the models from the following huggingface collection.
 
 The splade models were evaluated on 55 thousand queries and 8.84 million documents from the [MSMARCO](https://huggingface.co/datasets/microsoft/ms_marco) dataset.
 
-||Size (# Params)|MRR@10 (MS MARCO dev)|Recall@10|Corpus Active Dims|
-|:-|:------------|:--------------------|:--------|:-----------------|
-|`BM25`|-|18.0|37.8|-|
-|`rasyosef/splade-tiny`|4.4M|30.9|55.4|127.1|
-|`rasyosef/splade-mini`|11.2M|33.2|58.8|106.5|
-|`rasyosef/splade-small`|28.8M|35.2|62.1|179.2|
-|`naver/splade-v3-distilbert`|67.0M|38.7|66.8|192.3|
+||Size (# Params)|Embedding Type|MRR@10 (MS MARCO dev)|Recall@10|Corpus Active Dims|
+|:-|:------------|:-------------|:--------------------|:--------|:-----------------|
+|`BM25`|-|-|18.0|37.8|-|
+|`rasyosef/splade-tiny`|4.4M|sparse|30.9|55.4|127.1|
+|`rasyosef/splade-mini`|11.2M|sparse|33.2|58.8|106.5|
+|`rasyosef/splade-small`|28.8M|sparse|35.2|62.1|179.2|
+|`naver/splade-v3-distilbert`|67.0M|sparse|38.7|66.8|192.3|
+|`Snowflake/snowflake-arctic-embed-s`|33.2M |dense|33.7|60.7|384|
+|`intfloat/e5-small-v2`|33.4M|dense|34.4|61.8|384|
+|`Snowflake/snowflake-arctic-embed-m-v1.5`|109.0M|dense|35.2|63.6|768|
 
 ## Sample Inference Code
 
