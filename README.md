@@ -16,10 +16,10 @@ The splade models were evaluated on 55 thousand queries and 8.84 million documen
 ||Size (# Params)|Embedding Type|MSMARCO MRR@10|Recall@10|Corpus Active Dims|
 |:-|:------------|:-------------|:-------------|:--------|:-----------------|
 |**BM25**|-|-|18.0|37.8|-|
-|**rasyosef/splade-tiny**|4.4M|sparse|30.9|55.4|127.1|
-|**rasyosef/splade-mini**|11.2M|sparse|34.1|60.3|186.6|
-|**rasyosef/splade-small**|28.8M|sparse|35.4|62.4|176.9|
-|**naver/splade-v3-distilbert**|67.0M|sparse|38.7|66.8|192.3|
+|**[rasyosef/splade-tiny](https://huggingface.co/rasyosef/splade-tiny)**|4.4M|sparse|30.9|55.4|127.1|
+|**[rasyosef/splade-mini](https://huggingface.co/rasyosef/splade-mini)**|11.2M|sparse|34.1|60.3|186.6|
+|**[rasyosef/splade-small](https://huggingface.co/rasyosef/splade-small)**|28.8M|sparse|35.4|62.4|176.9|
+|**[naver/splade-v3-distilbert](https://huggingface.co/naver/splade-v3-distilbert)**|67.0M|sparse|38.7|66.8|192.3|
 
 Here are a few Dense Embedding models evaluated for comparison
 
